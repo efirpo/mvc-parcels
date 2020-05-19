@@ -5,12 +5,12 @@ namespace Parcels.Models
 {
   public class Parcel
   {
-    public int Length { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public int Weight { get; set; }
+    public static int Length { get; set; }
+    public static int Width { get; set; }
+    public static int Height { get; set; }
+    public static int Weight { get; set; }
 
-    public GetDimensions(string length, string width, string height, string weight)
+    public void GetDimensions(int length, int width, int height, int weight)
     {
       Length = length;
       Width = width;
@@ -18,15 +18,16 @@ namespace Parcels.Models
       Weight = weight;
     }
 
-    public Volume()
+    public int Volume()
     {
       int volume = Length * Width * Height;
       return volume;
     }
 
-    public Cost()
+    public decimal Cost()
     {
-      decimal cost = (Volume() * 1.5) * (Weight * .6);
+      decimal cost = Math.Round(((Volume() * 1.5m) * (Weight * .6m)), 2);
+      return cost;
     }
 
   }
