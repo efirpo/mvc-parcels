@@ -11,8 +11,8 @@ namespace Parcels.Controllers
     public ActionResult Index(int length, int width, int height, int weight)
     {
       Parcel parcel = new Parcel();
-      parcel.GetDimensions(length, width, height, weight);
-      return View();
+      Parcel.GetDimensions(length, width, height, weight);
+      return View(parcel);
     }
   }
 }

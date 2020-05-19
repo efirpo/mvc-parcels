@@ -1,10 +1,12 @@
+@using Parcels.Models;
+
 <ul>
 <li> Parcel Dimensions: </li>
 <ul>
-  <li>@Model.Length in x @Model.Width in x @Model.Height in</li>
-  <li>@Model.Volume() sq in</li>
-  <li>@Model.Weight lbs.</li>
+  <li>@Parcel.Length in x @Parcel.Width in x @Parcel.Height in</li>
+  <li>@Parcel.Volume() sq in</li>
+  <li>@Parcel.Weight lbs.</li>
 </ul>
-<li> Shipping Cost: $ @Model.Cost() </li>
+<li> Shipping Cost: $ @Parcel.Cost() </li>
 
 </ul>

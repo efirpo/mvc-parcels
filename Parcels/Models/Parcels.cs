@@ -10,7 +10,7 @@ namespace Parcels.Models
     public static int Height { get; set; }
     public static int Weight { get; set; }
 
-    public void GetDimensions(int length, int width, int height, int weight)
+    public static void GetDimensions(int length, int width, int height, int weight)
     {
       Length = length;
       Width = width;
@@ -18,13 +18,13 @@ namespace Parcels.Models
       Weight = weight;
     }
 
-    public int Volume()
+    public static int Volume()
     {
       int volume = Length * Width * Height;
       return volume;
     }
 
-    public decimal Cost()
+    public static decimal Cost()
     {
       decimal cost = Math.Round(((Volume() * 1.5m) * (Weight * .6m)), 2);
       return cost;

@@ -1,14 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Parcels.Models;
 
 namespace Parcels.Controllers
 {
   public class ParcelsController : Controller
   {
-    [HttpGet("/parcels")]
+    // [HttpGet("/parcels")]
+    // public ActionResult Index()
+    // {
+    //   return View();
+    // }
 
-    public ActionResult Index()
+
+    [HttpPost("/parcels")]
+    public ActionResult Index(int length, int width, int height, int weight)
     {
-      return View();
+      Parcel parcel = new Parcel();
+      Parcel.GetDimensions(length, width, height, weight);
+      return View(parcel);
     }
   }
 }
