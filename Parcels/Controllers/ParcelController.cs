@@ -14,11 +14,18 @@ namespace Parcels.Controllers
 
 
     [HttpPost("/parcels")]
-    public ActionResult Index(int length, int width, int height, int weight)
+    public ActionResult Index(string length, string width, string height, string weight)
     {
-      Parcel parcel = new Parcel();
-      Parcel.GetDimensions(length, width, height, weight);
-      return View(parcel);
+      if (length == null || width == null || height == null || weight == null)
+      {
+        return View("../Home/Error");
+      }
+      else
+      {
+        Parcel parcel = new Parcel();
+        Parcel.GetDimensions(length, width, height, weight);
+        return View(parcel);
+      }
     }
   }
 }

@@ -22,3 +22,4 @@
 /Users/suzannedeakins/Desktop/Epicodus/Parcels.Solution/Parcels/obj/Debug/netcoreapp2.2/Parcels.dll
 /Users/suzannedeakins/Desktop/Epicodus/Parcels.Solution/Parcels/obj/Debug/netcoreapp2.2/Parcels.pdb
 /Users/suzannedeakins/Desktop/Epicodus/Parcels.Solution/Parcels/obj/Debug/netcoreapp2.2/Parcels.csproj.CopyComplete
+/Users/suzannedeakins/Desktop/Epicodus/Parcels.Solution/Parcels/obj/Debug/netcoreapp2.2/Razor/Views/Home/Error.g.cshtml.cs

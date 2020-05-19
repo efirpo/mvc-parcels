@@ -10,12 +10,12 @@ namespace Parcels.Models
     public static int Height { get; set; }
     public static int Weight { get; set; }
 
-    public static void GetDimensions(int length, int width, int height, int weight)
+    public static void GetDimensions(string length, string width, string height, string weight)
     {
-      Length = length;
-      Width = width;
-      Height = height;
-      Weight = weight;
+      Length = int.Parse(length);
+      Width = int.Parse(width);
+      Height = int.Parse(height);
+      Weight = int.Parse(weight);
     }
 
     public static int Volume()
